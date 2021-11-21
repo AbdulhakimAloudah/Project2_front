@@ -1,9 +1,9 @@
 import Reacr from 'react';
-
+import Game from './components/game';
 function App() {
   return (
     <div className="App">
-        <h1>hello</h1>
+        <Game />
     </div>
   );
 }
