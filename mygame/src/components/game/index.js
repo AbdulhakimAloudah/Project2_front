@@ -1,13 +1,29 @@
 import React from 'react'
-import c from "../.././img/g.jpg"
-import a from "../.././img/a.jpeg"
-import b from "../.././img/b.png"
 import { useState,useEffect } from 'react'
 
+import r1 from "../.././img/r1.png"
+import r2 from "../.././img/r2.png"
+import r3 from "../.././img/r3.png"
+import r4 from "../.././img/r4.png"
+import t1 from "../.././img/t1.png"
+import t2 from "../.././img/t2.png"
+import t3 from "../.././img/t3.png"
+import t4 from "../.././img/t4.png"
+import t5 from "../.././img/t5.png"
+import t6 from "../.././img/t6.png"
 
 // my Array
 export default function Game() {
-    let qush = [{img:c, answer:true},{img:a, answer:false},{img:b, answer:true}]
+    let qush = [{img:t1, answer:true},
+        {img:t2, answer:true},
+        {img:r1, answer:false},
+        {img:t3, answer:true},
+        {img:r2, answer:false},
+        {img:r3, answer:false},
+        {img:t4, answer:true},
+        {img:r4, answer:false},
+        {img:t5, answer:true},
+        {img:t6, answer:true}]
 
 
 
@@ -25,6 +41,9 @@ const check = (ans,button)=>{
     console.log('wrong answer');
     }
     setcont(cont + 1 )
+    if  ( score == 10){
+        // navigate ('/')
+    }
 }
 
 //timer1
@@ -63,8 +82,8 @@ const [scend, setscend] = useState(7)
               <img src={qush[cont].img} alt="" />
        
          <div>
-               <button onClick={()=>{check(qush[cont].answer,true)}}>TRUE</button>
-               <button onClick={()=>{check(qush[cont].answer,false)}}>FALSE</button>
+               <button onClick={()=>{check(qush[cont].answer,true)}}>YES</button>
+               <button onClick={()=>{check(qush[cont].answer,false)}}>NO</button>
               </div>
         </div>
     )
