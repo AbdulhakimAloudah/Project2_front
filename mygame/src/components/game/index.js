@@ -26,7 +26,7 @@ const check = (ans,button)=>{
     return (
         <div>
            <div>
-               <p>1 of 10</p>
+               <p>{cont + 1} of 10</p>
                <p>SECONDS: 00</p>
                <p>POINTS 0</p>
           </div>
