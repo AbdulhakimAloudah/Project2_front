@@ -1,9 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import Home from "../home"
-import {Link, useNavigate} from "react-router-dom"
-
+import Home from "../home";
+import { Link, useNavigate } from "react-router-dom";
 
 import r1 from "../.././img/r1.png";
 import r2 from "../.././img/r2.png";
@@ -18,7 +17,7 @@ import t6 from "../.././img/t6.png";
 
 // my Array
 export default function Game() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   let qush = [
     { img: t1, answer: true },
     { img: t2, answer: true },
@@ -37,9 +36,7 @@ export default function Game() {
 
   //butten
   const check = (ans, button) => {
-    
-    if (cont == 1) {
-
+    if (cont == 9) {
       Swal.fire({
         title: `yor score is ${score}`,
         // showDenyButton: true,
@@ -47,16 +44,16 @@ export default function Game() {
         cancelButtonText: "go home",
         confirmButtonText: "play again",
         // denyButtonText: `Don't save`,
-          }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-              navigate ("/home")
-            } else if (result.isDenied) {
-              Swal.fire("Changes are not saved", "", "info");
-            }
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          navigate("/home");
+        } else if (result.isDenied) {
+          Swal.fire("Changes are not saved", "", "info");
+        }
       });
     } else {
-      setscend(7);
+      setscend(10);
       if (ans == button) {
         console.log("correct answer");
         setscore(score + 1);
@@ -72,18 +69,18 @@ export default function Game() {
     const timer = setTimeout(() => {
       console.log("wrong answer");
       setcont(cont + 1);
-    }, 7000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, [cont]);
 
   //timer2
-  const [scend, setscend] = useState(7);
+  const [scend, setscend] = useState(10);
   useEffect(() => {
     const timer = setInterval(() => {
       setscend(scend - 1);
     }, 1000);
     if (scend <= 0) {
-      setscend(7);
+      setscend(10);
     }
     return () => clearTimeout(timer);
   }, [scend]);
