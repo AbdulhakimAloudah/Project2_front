@@ -41,15 +41,15 @@ export default function Game() {
         title: `yor score is ${score}`,
         // showDenyButton: true,
         showCancelButton: true,
-        cancelButtonText: "play again",
+        cancelButtonText:  "play again",
         confirmButtonText: "go home",
         // denyButtonText: `Don't save`,
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           navigate("/");
-        } else if (result.isDenied) {
-          Swal.fire("Changes are not saved", "", "info");
+        } else if (result.isDismissed) {
+         window.location.reload()
         }
       });
     } else {
