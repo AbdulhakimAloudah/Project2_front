@@ -14,20 +14,20 @@ const Home = () => {
           {" "}
           <button> Find the doog</button>{" "}
         </Link>
-
         <Link to="/apple">
           {" "}
           <button> Find the apple</button>{" "}
         </Link>
-
         <br />
-        <Link to="/">
+        <Link to="/signup">
           {" "}
           <button>Sign Up</button>{" "}
         </Link>
 
-        <button>login</button>
-
+        <Link to="/login">
+          {" "}
+          <button>login</button>{" "}
+        </Link>
         <p>By clicking Sign Up, you agree to our Terms, Data Policy</p>
       </div>
     </div>
