@@ -39,25 +39,17 @@ const nav = (bath)=>{
     <div>
       <h1>choose the game</h1>
       <div>
-          <button onClick={()=>
-          nav('/cat')
-          }> Find the cat</button>{" "}
-
-        <Link to="/dog">
-          <button> Find the dog</button>{" "}
-        </Link>
-        <Link to="/apple">
-          <button> Find the apple</button>{" "}
-        </Link>
+        <button onClick={() => nav("/cat")}> Find the cat </button>{" "}
+        <button onClick={() => nav("/dog")}> Find the dog </button>{" "}
+        <button onClick={() => nav("/apple")}> Find the apple </button>{" "}
+    
         <br />
         <Link to="/signup" className={`${show}`}>
           <button>Sign Up</button>{" "}
         </Link>
-
         <Link to="/login" className={`${show}`}>
           <button>login</button>{" "}
         </Link>
-
         <button onClick={logout} className={`${hide}`}>
           logout
         </button>
