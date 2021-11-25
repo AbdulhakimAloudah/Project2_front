@@ -4,31 +4,31 @@ import Swal from "sweetalert2";
 import Home from "../home";
 import { Link, useNavigate } from "react-router-dom";
 
-import r1 from "../.././img/r1.png";
-import r2 from "../.././img/r2.png";
-import r3 from "../.././img/r3.png";
-import r4 from "../.././img/r4.png";
-import t1 from "../.././img/t1.png";
-import t2 from "../.././img/t2.png";
-import t3 from "../.././img/t3.png";
-import t4 from "../.././img/t4.png";
-import t5 from "../.././img/t5.png";
-import t6 from "../.././img/t6.png";
+import n1 from "../.././imga/n1.png";
+import n2 from "../.././imga/n2.png";
+import n3 from "../.././imga/n3.png";
+import n4 from "../.././imga/n4.png";
+import n5 from "../.././imga/n5.png";
+import t1 from "../.././imga/t1.png";
+import t2 from "../.././imga/t2.png";
+import t3 from "../.././imga/t3.png";
+import t4 from "../.././imga/t4.png";
+import t5 from "../.././imga/t5.png";
 
 // my Array
 export default function Game() {
   const navigate = useNavigate();
   let qush = [
     { img: t1, answer: true },
+    { img: n1, answer: false },
     { img: t2, answer: true },
-    { img: r1, answer: false },
     { img: t3, answer: true },
-    { img: r2, answer: false },
-    { img: r3, answer: false },
+    { img: n2, answer: false },
     { img: t4, answer: true },
-    { img: r4, answer: false },
+    { img: n3, answer: false },
+    { img: n4, answer: false },
+    { img: n5, answer: false },
     { img: t5, answer: true },
-    { img: t6, answer: true },
   ];
 
   const [cont, setcont] = useState(0);
