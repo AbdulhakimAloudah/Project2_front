@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import Home from "../home";
@@ -87,17 +88,38 @@ export default function Game() {
 
   //gamePage
   return (
-    <div>
-      <div>
-        <p>{cont + 1} of 10</p>
-        <p>SECONDS: {scend}</p>
-        <p>POINTS {score}</p>
+    <>
+      <h1 className="theTitle"> find the apple </h1>
+      <div className="container">
+        <div className="tit ">
+          <div>
+            <p> of 10</p>
+            <p className="imjcon">{cont + 1} </p>
+          </div>
+          <hr />
+          <div>
+            <p>SECONDS</p>
+            <p className="secondes"> {scend}</p>
+          </div>
+          <hr />
+          <div>
+            <p>POINTS </p>
+            <p className="cont">{score}</p>
+          </div>
+        </div>
+        <hr />
+        <img className="imgg , tit" src={qush[cont].img} alt="" />
+
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
       </div>
-
-      <img src={qush[cont].img} alt="" />
-
-      <div>
+      <div className="btnDiv">
         <button
+          className="btny"
           onClick={() => {
             check(qush[cont].answer, true);
           }}
@@ -105,6 +127,7 @@ export default function Game() {
           YES
         </button>
         <button
+          className="btnn"
           onClick={() => {
             check(qush[cont].answer, false);
           }}
@@ -112,6 +135,6 @@ export default function Game() {
           NO
         </button>
       </div>
-    </div>
+    </>
   );
 }
