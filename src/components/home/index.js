@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
 const Home = () => {
+    const navigate = useNavigate();
+
   const [show, setshow] = useState("");
   const [hide, sethide] = useState("hide");
   useEffect(() => {
@@ -12,8 +14,10 @@ const Home = () => {
     }
   }, []);
 
-  const dltLocalStorage = () => {
+  const logout = () => {
     localStorage.clear();
+    sethide("hide");
+    setshow("");
   //  hhhh  ()
   };
 
@@ -23,16 +27,24 @@ const Home = () => {
 
 //   }
   
+const nav = (bath)=>{
+  if (localStorage.getItem("User")) {
+    navigate(bath)
+  }else {
+    alert("logein first")
+  }
+}
 
   return (
     <div>
-      <h1>chuse the game</h1>
+      <h1>choose the game</h1>
       <div>
-        <Link to="/cat">
-          <button> Find the cat</button>{" "}
-        </Link>
+          <button onClick={()=>
+          nav('/cat')
+          }> Find the cat</button>{" "}
+
         <Link to="/dog">
-          <button> Find the doog</button>{" "}
+          <button> Find the dog</button>{" "}
         </Link>
         <Link to="/apple">
           <button> Find the apple</button>{" "}
@@ -46,7 +58,7 @@ const Home = () => {
           <button>login</button>{" "}
         </Link>
 
-        <button onClick={dltLocalStorage} className={`${hide}`}>
+        <button onClick={logout} className={`${hide}`}>
           logout
         </button>
         <p>By clicking Sign Up, you agree to our Terms, Data Policy</p>

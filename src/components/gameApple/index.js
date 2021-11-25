@@ -18,6 +18,8 @@ import t5 from "../.././imga/t5.png";
 
 // my Array
 export default function Game() {
+  const [scend, setscend] = useState(10);
+
   const navigate = useNavigate();
   let qush = [
     { img: t1, answer: true },
@@ -38,6 +40,7 @@ export default function Game() {
   //butten
   const check = (ans, button) => {
     if (cont == 9) {
+      
       Swal.fire({
         title: `yor score is ${score}`,
         // showDenyButton: true,
@@ -75,10 +78,12 @@ export default function Game() {
   }, [cont]);
 
   //timer2
-  const [scend, setscend] = useState(10);
   useEffect(() => {
     const timer = setInterval(() => {
+     //
+      if (cont != 9) {
       setscend(scend - 1);
+      }
     }, 1000);
     if (scend <= 0) {
       setscend(10);

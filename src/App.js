@@ -6,6 +6,8 @@ import GameApple from "./components/gameApple";
 import Login from "./components/login";
 import SignUp from "./components/signup";
 import Home from "./components/home";
+import './App.css'
+
 
 
 function App() {

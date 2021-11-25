@@ -88,7 +88,7 @@ export default function Game() {
   //gamePage
   return (
     <>
-      <h1 className="theTitle"> find the apple </h1>
+      <h1 className="theTitle "> find the apple </h1>
       <div className="container">
         <div className="tit ">
           <div>
