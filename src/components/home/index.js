@@ -12,6 +12,18 @@ const Home = () => {
     }
   }, []);
 
+  const dltLocalStorage = () => {
+    localStorage.clear();
+  //  hhhh  ()
+  };
+
+//   const hhhh = ()=>{
+//     setshow("hide");
+// sethide("");
+
+//   }
+  
+
   return (
     <div>
       <h1>chuse the game</h1>
@@ -33,7 +45,10 @@ const Home = () => {
         <Link to="/login" className={`${show}`}>
           <button>login</button>{" "}
         </Link>
-        <button className={`${hide}`}>logout</button>
+
+        <button onClick={dltLocalStorage} className={`${hide}`}>
+          logout
+        </button>
         <p>By clicking Sign Up, you agree to our Terms, Data Policy</p>
       </div>
     </div>

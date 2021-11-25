@@ -4,31 +4,31 @@ import Swal from "sweetalert2";
 import Home from "../home";
 import { Link, useNavigate } from "react-router-dom";
 
-import r1 from "../.././img/r1.png";
-import r2 from "../.././img/r2.png";
-import r3 from "../.././img/r3.png";
-import r4 from "../.././img/r4.png";
-import t1 from "../.././img/t1.png";
-import t2 from "../.././img/t2.png";
-import t3 from "../.././img/t3.png";
-import t4 from "../.././img/t4.png";
-import t5 from "../.././img/t5.png";
-import t6 from "../.././img/t6.png";
+import y1 from "../../././imgd/y1.png";
+import y2 from "../../././imgd/y2.png";
+import n1 from "../../././imgd/n1.png";
+import n2 from "../../././imgd/n2.png";
+import y3 from "../../././imgd/y3.png";
+import n3 from "../../././imgd/n3.png";
+import y4 from "../../././imgd/y4.png";
+import n4 from "../../././imgd/n4.png";
+import n5 from "../../././imgd/n5.png";
+import y5 from "../../././imgd/y5.png";
 
 // my Array
 export default function Game() {
   const navigate = useNavigate();
   let qush = [
-    { img: t1, answer: true },
-    { img: t2, answer: true },
-    { img: r1, answer: false },
-    { img: t3, answer: true },
-    { img: r2, answer: false },
-    { img: r3, answer: false },
-    { img: t4, answer: true },
-    { img: r4, answer: false },
-    { img: t5, answer: true },
-    { img: t6, answer: true },
+    { img: y1, answer: true },
+    { img: y2, answer: true },
+    { img: n1, answer: false },
+    { img: n2, answer: false },
+    { img: y3, answer: true },
+    { img: n3, answer: false },
+    { img: y4, answer: true },
+    { img: n4, answer: false },
+    { img: n5, answer: false },
+    { img: y5, answer: true },
   ];
 
   const [cont, setcont] = useState(0);
