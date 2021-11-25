@@ -1,0 +1,115 @@
+.secondes {
+  color: red;
+  font-size: 50px;
+}
+
+.cont {
+  color: green;
+  font-size: 50px;
+}
+
+
+.imjcon{
+    color: white;
+    font-size: 50px;
+}
+.btny {
+  margin-right: 15px;
+  display: inline-block;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(#24b343 0%, #24b343 100%);
+  background-image: linear-gradient(#66c775 0%, #24b343 100%);
+  box-shadow: 0 1px 1px rgba(83, 83, 83, 0.28);
+  
+}
+#leftbox {
+  float: left;
+  background: Red;
+  width: 800px;
+  height: 600px;
+}
+
+#rightbox {
+  float: right;
+
+  width: 25%;
+  height: 600px;
+}
+.tit {
+  /* border: none; */
+  border-radius: 10px;
+  background-color: rgb(3, 3, 3);
+  height: 30%;
+  width: 40%;
+  font-size: 20px;
+  border: black solid 5px;
+  text-align: center;
+  color: blanchedalmond;
+  /* flex-wrap: wrap; */
+  margin-left: 20px;
+}
+
+.btnn {
+  display: inline-block;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(#d42929 0%, #d42929 100%);
+  background-image: linear-gradient(#fd6565 0%, #d42929 100%);
+  box-shadow: 0 1px 1px rgba(83, 83, 83, 0.28);
+}
+
+.theTitle {
+  text-align: center;
+  margin-top: 110px;
+  margin-left: 110px;
+  font-size: 70px;
+}
+.btnDiv {
+    
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.imgg {
+  float: left;
+  width: 800px;
+  height: 600px;
+  background-size: cover;
+}
+
+
+button{
+   
+    cursor: pointer;
+  
+}
