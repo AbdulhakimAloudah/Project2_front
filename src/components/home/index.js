@@ -36,24 +36,31 @@ const nav = (bath)=>{
 }
 
   return (
-    <div>
-      <h1>choose the game</h1>
-      <div>
-        <button onClick={() => nav("/cat")}> Find the cat </button>{" "}
-        <button onClick={() => nav("/dog")}> Find the dog </button>{" "}
-        <button onClick={() => nav("/apple")}> Find the apple </button>{" "}
-    
+    <div >
+      <h1 className="title">choose the game</h1>
+      <div className='boxHome'>
+        <button className="botHome" onClick={() => nav("/cat")}>
+          {" "}
+          Find the cat{" "}
+        </button>{" "}
+        <button className="botHome" onClick={() => nav("/dog")}>
+          {" "}
+          Find the dog{" "}
+        </button>{" "}
+        <button className="botHome" onClick={() => nav("/apple")}>
+          {" "}
+          Find the apple{" "}
+        </button>{" "}
         <br />
         <Link to="/signup" className={`${show}`}>
-          <button>Sign Up</button>{" "}
+          <button className="btnLog">Sign Up</button>{" "}
         </Link>
         <Link to="/login" className={`${show}`}>
-          <button>login</button>{" "}
+          <button className="btnLog">login</button>{" "}
         </Link>
-        <button onClick={logout} className={`${hide}`}>
+        <button id="btnLo" onClick={logout} className={`${hide}`}>
           logout
         </button>
-        <p>By clicking Sign Up, you agree to our Terms, Data Policy</p>
       </div>
     </div>
   );

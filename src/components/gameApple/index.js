@@ -18,7 +18,7 @@ import t5 from "../.././imga/t5.png";
 
 // my Array
 export default function Game() {
-  const [scend, setscend] = useState(10);
+  let [scend, setscend] = useState(10);
 
   const navigate = useNavigate();
   let qush = [
@@ -32,15 +32,20 @@ export default function Game() {
     { img: n4, answer: false },
     { img: n5, answer: false },
     { img: t5, answer: true },
+    { img: t5, answer: true },
+    { img: t5, answer: true },
+    { img: t5, answer: true },
+    { img: t5, answer: true },
   ];
 
-  const [cont, setcont] = useState(0);
+  let [cont, setcont] = useState(0);
   const [score, setscore] = useState(0);
-
+let stop = false
   //butten
   const check = (ans, button) => {
     if (cont == 9) {
-      
+      stop = true;
+      cont=333;
       Swal.fire({
         title: `yor score is ${score}`,
         // showDenyButton: true,
@@ -79,9 +84,8 @@ export default function Game() {
 
   //timer2
   useEffect(() => {
-    const timer = setInterval(() => {
-     //
-      if (cont != 9) {
+    const timer = setTimeout(() => {
+      if (stop!=true) {
       setscend(scend - 1);
       }
     }, 1000);
@@ -113,7 +117,9 @@ export default function Game() {
           </div>
         </div>
         <hr />
-        <img className="imgg , tit" src={qush[cont].img} alt="" />
+
+            <img className="imgg , tit" src={qush[cont].img} alt="" />
+
 
         <hr />
         <hr />

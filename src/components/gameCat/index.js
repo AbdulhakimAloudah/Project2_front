@@ -17,6 +17,8 @@ import t6 from "../.././img/t6.png";
 
 // my Array
 export default function Game() {
+    const [scend, setscend] = useState(10);
+
   const navigate = useNavigate();
   let qush = [
     { img: t1, answer: true },
@@ -74,21 +76,23 @@ export default function Game() {
   }, [cont]);
 
   //timer2
-  const [scend, setscend] = useState(10);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setscend(scend - 1);
-    }, 1000);
-    if (scend <= 0) {
-      setscend(10);
-    }
-    return () => clearTimeout(timer);
-  }, [scend]);
+   useEffect(() => {
+     const timer = setInterval(() => {
+       //
+       if (cont != 9) {
+         setscend(scend - 1);
+       }
+     }, 1000);
+     if (scend <= 0) {
+       setscend(10);
+     }
+     return () => clearTimeout(timer);
+   }, [scend]);
 
   //gamePage
   return (
     <>
-      <h1 className="theTitle"> find the apple </h1>
+      <h1 className="theTitle"> Find the Apple </h1>
       <div className="container">
         <div className="tit ">
           <div>

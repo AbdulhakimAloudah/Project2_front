@@ -8,10 +8,9 @@
   font-size: 50px;
 }
 
-
-.imjcon{
-    color: white;
-    font-size: 50px;
+.imjcon {
+  color: white;
+  font-size: 50px;
 }
 .btny {
   margin-right: 15px;
@@ -31,7 +30,6 @@
   background-image: -webkit-linear-gradient(#24b343 0%, #24b343 100%);
   background-image: linear-gradient(#66c775 0%, #24b343 100%);
   box-shadow: 0 1px 1px rgba(83, 83, 83, 0.28);
-  
 }
 #leftbox {
   float: left;
@@ -80,13 +78,13 @@
 }
 
 .theTitle {
+  color: #dd1414;
   text-align: center;
   margin-top: 110px;
   margin-left: 110px;
   font-size: 70px;
 }
 .btnDiv {
-    
   text-align: center;
   margin-top: 10px;
   margin-left: 100px;
@@ -107,9 +105,6 @@
   background-size: cover;
 }
 
-
-button{
-   
-    cursor: pointer;
-  
+button {
+  cursor: pointer;
 }
