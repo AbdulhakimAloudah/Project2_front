@@ -31,14 +31,19 @@ export default function Game() {
     { img: r4, answer: false },
     { img: t5, answer: true },
     { img: t6, answer: true },
+    { img: t6, answer: true },
+    { img: t6, answer: true },
+    { img: t6, answer: true },
   ];
 
-  const [cont, setcont] = useState(0);
+  let [cont, setcont] = useState(0);
   const [score, setscore] = useState(0);
-
+  let stop = false;
   //butten
   const check = (ans, button) => {
     if (cont == 9) {
+      stop = true;
+      cont = 333;
       Swal.fire({
         title: `yor score is ${score}`,
         // showDenyButton: true,
@@ -76,23 +81,22 @@ export default function Game() {
   }, [cont]);
 
   //timer2
-   useEffect(() => {
-     const timer = setInterval(() => {
-       //
-       if (cont != 9) {
-         setscend(scend - 1);
-       }
-     }, 1000);
-     if (scend <= 0) {
-       setscend(10);
-     }
-     return () => clearTimeout(timer);
-   }, [scend]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (stop != true) {
+        setscend(scend - 1);
+      }
+    }, 1000);
+    if (scend <= 0) {
+      setscend(10);
+    }
+    return () => clearTimeout(timer);
+  }, [scend]);
 
   //gamePage
   return (
     <>
-      <h1 className="theTitle"> Find the Apple </h1>
+      <h1 className="theTitle"> Find the Cat</h1>
       <div className="container">
         <div className="tit ">
           <div>

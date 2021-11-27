@@ -4,7 +4,7 @@
 
 
 .title{
-    color: #F26A1B;
+    color: #F2D0BD;
     margin-top: 100px;
     font-size: 80px;
     text-align: center;
@@ -12,7 +12,8 @@
 
 
 .botHome {
-    background-color: #F26A1B; /* Green */
+  font-size: 40px;
+    background-color: #40282E; /* Green */
  border-radius: 5px;
     /* border: none; */
   color: white;
@@ -26,7 +27,7 @@
 }
 
 .btnLog{
-     background-color:#F26363   ; /* Green */
+     background-color:#F29C94   ; /* Green */
  border-radius: 5px;
     /* border: none; */
   color: white;
@@ -37,11 +38,13 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+    width: 300px;
+
 }
 
 #btnLo{
     
-     background-color:#F26363   ; /* Green */
+     background-color:#F29C94   ; /* Green */
  border-radius: 5px;
     /* border: none; */
   color: white;
@@ -52,6 +55,8 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+    width: 300px;
+
 }
 
 /* .boxHome{
@@ -63,16 +68,20 @@
     background-color: red; */
 /* bottom: 100px; */
    .boxHome{ 
-     border: 3px solid green;
+     border: 3px solid #F2D0BD;
     width: 700px;
   margin: auto;
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   flex-direction: column;
  height: 500px;
+ justify-content: center;
 }
 
-   
+   .botHome {
+  font-size: 20px;
+  width: 300px;
+   }
     
     

@@ -37,7 +37,7 @@ const nav = (bath)=>{
 
   return (
     <div >
-      <h1 className="title">choose the game</h1>
+      <h1 className="title">Choose The Game</h1>
       <div className='boxHome'>
         <button className="botHome" onClick={() => nav("/cat")}>
           {" "}

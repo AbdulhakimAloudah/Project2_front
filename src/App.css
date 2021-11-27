@@ -4,5 +4,38 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ececec; 
+    background-color: #5C736C; 
+}
+
+
+.labelInput{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+   text-align: center;
+  text-decoration: none;
+  display:block;
+}
+
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+.botHHome {
+    font-size: 40px;
+    background-color: #40282E; /* Green */
+ border-radius: 5px;
+    /* border: none; */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ margin-left: 210px;  
 }

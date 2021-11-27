@@ -26,18 +26,26 @@ const Login = () => {
     }
   };
   return (
-    <div>
-      <h1>hi king login</h1>
-      <form onSubmit={goLogin}>
-        <label htmlFor="">email</label>
-        <input type="email" name="email" />
+    <>
+      <h1 className="title">Log in</h1>
+      <div className="boxHome">
+        <form onSubmit={goLogin}>
+          <label className="labelInput" htmlFor="">
+            email
+          </label>
+          <input type="email" name="email" />
 
-        <label htmlFor="">password</label>
-        <input type="password" name="password" />
+          <label className="labelInput" htmlFor="">
+            password
+          </label>
+          <input type="password" name="password" />
 
-        <button type="submit">login</button>
-      </form>
-    </div>
+          <button className="botHHome" type="submit">
+            login
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 

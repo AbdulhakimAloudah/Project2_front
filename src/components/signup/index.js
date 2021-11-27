@@ -28,21 +28,29 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <h1>hi king SignUp</h1>
-      <form onSubmit={goLogin}>
-        <label htmlFor="">user name</label>
-        <input type="text" name="userName" />
+    <>
+      <h1 className="title">Create account</h1>
+      <div className="boxHome">
+        <form onSubmit={goLogin}>
+          <label className="labelInput" htmlFor="">
+            user name
+          </label>
+          <input type="text" name="userName" />
 
-        <label htmlFor="">email</label>
-        <input type="email" name="email" />
+          <label className="labelInput" htmlFor="">
+            email
+          </label>
+          <input type="email" name="email" />
 
-        <label htmlFor="">password</label>
-        <input type="password" name="password" />
+          <label className="labelInput" htmlFor="">
+            password
+          </label>
+          <input type="password" name="password" />
 
-        <button>regester</button>
-      </form>
-    </div>
+          <button className= "botHHome">regester</button>
+        </form>
+      </div>
+    </>
   );
 };
 

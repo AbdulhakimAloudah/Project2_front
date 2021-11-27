@@ -13,7 +13,6 @@
   font-size: 50px;
 }
 .btny {
-  margin-right: 15px;
   display: inline-block;
   font-size: 25px;
   position: relative;
@@ -27,8 +26,8 @@
   vertical-align: middle;
   overflow: hidden;
   font-weight: bold;
-  background-image: -webkit-linear-gradient(#24b343 0%, #24b343 100%);
-  background-image: linear-gradient(#66c775 0%, #24b343 100%);
+  background-image: -webkit-linear-gradient(#F2D0BD 0%, #F2D0BD 100%);
+  background-image: linear-gradient(#F2D0BD 0%, #F2D0BD 100%);
   box-shadow: 0 1px 1px rgba(83, 83, 83, 0.28);
 }
 #leftbox {
@@ -72,13 +71,13 @@
   vertical-align: middle;
   overflow: hidden;
   font-weight: bold;
-  background-image: -webkit-linear-gradient(#d42929 0%, #d42929 100%);
-  background-image: linear-gradient(#fd6565 0%, #d42929 100%);
+  background-image: -webkit-linear-gradient(#40282E 0%, #40282E 100%);
+  background-image: linear-gradient(#40282E 0%, #40282E 100%);
   box-shadow: 0 1px 1px rgba(83, 83, 83, 0.28);
 }
 
 .theTitle {
-  color: #dd1414;
+  color: #F2D0BD;
   text-align: center;
   margin-top: 110px;
   margin-left: 110px;

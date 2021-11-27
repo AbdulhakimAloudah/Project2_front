@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import Home from "../home";
@@ -17,6 +18,8 @@ import y5 from "../../././imgd/y5.png";
 
 // my Array
 export default function Game() {
+  let [scend, setscend] = useState(10);
+
   const navigate = useNavigate();
   let qush = [
     { img: y1, answer: true },
@@ -29,14 +32,18 @@ export default function Game() {
     { img: n4, answer: false },
     { img: n5, answer: false },
     { img: y5, answer: true },
+    { img: y5, answer: true },
+    { img: y5, answer: true },
   ];
 
-  const [cont, setcont] = useState(0);
+  let [cont, setcont] = useState(0);
   const [score, setscore] = useState(0);
-
+  let stop = false;
   //butten
   const check = (ans, button) => {
     if (cont == 9) {
+      stop = true;
+      cont = 333;
       Swal.fire({
         title: `yor score is ${score}`,
         // showDenyButton: true,
@@ -74,10 +81,11 @@ export default function Game() {
   }, [cont]);
 
   //timer2
-  const [scend, setscend] = useState(10);
   useEffect(() => {
-    const timer = setInterval(() => {
-      setscend(scend - 1);
+    const timer = setTimeout(() => {
+      if (stop != true) {
+        setscend(scend - 1);
+      }
     }, 1000);
     if (scend <= 0) {
       setscend(10);
@@ -88,7 +96,7 @@ export default function Game() {
   //gamePage
   return (
     <>
-      <h1 className="theTitle "> find the apple </h1>
+      <h1 className="theTitle"> Find The apple </h1>
       <div className="container">
         <div className="tit ">
           <div>
@@ -107,6 +115,7 @@ export default function Game() {
           </div>
         </div>
         <hr />
+
         <img className="imgg , tit" src={qush[cont].img} alt="" />
 
         <hr />
